@@ -12,6 +12,7 @@ Continuous Deployment to the following providers are currently supported out of 
 * [biicode](/user/deployment/biicode)
 * [Cloud 66](/user/deployment/cloud66)
 * [Heroku](/user/deployment/heroku)
+* [AWS CodeDeploy](/user/deployment/codedeploy)
 * [Modulus](/user/deployment/modulus)
 * [Nodejitsu](/user/deployment/nodejitsu)
 * [OpenShift](/user/deployment/openshift)
