@@ -1,7 +1,7 @@
 ---
 title: biicode deployment
 layout: en
-permalink: biicode/
+permalink: /user/deployment/biicode/
 ---
 
 Travis CI can automatically publish your [biicode](https://www.biicode.com) blocks after a successful deploy.
@@ -58,7 +58,7 @@ Builds triggered from Pull Requests will never trigger a deploy.
 
 After your tests ran and before the deploy, Travis CI will clean up any additional files and changes you made.
 
-Maybe that is not what you want, as you might generate some artifacts that are supposed to be deployed too (like dependencies' data). There is now an option to skip the clean up:
+Maybe that is not what you want, as you might generate some artifacts that are supposed to be deployed too (like dependencies' data). There is an option to skip the clean up:
 
 {% highlight yaml %}
 deploy:
@@ -113,14 +113,14 @@ install
 Let's say you have a C++ math library called *CppMath*. It's hosted in github and you are running some unit tests via Travis CI.  
 Deploy your CppMath library to biicode, a C and C++ dependency manager, make it available for everybody to use via an `#include`!
 
-Use Travis CI with biicode to automatize* the process: 
+Use Travis CI with biicode to automate the process: 
 
   - Run some unit tests on the library
   - Use `bii publish` command to deploy to biicode.
 
 Here's [CppMath example code](https://github.com/Manu343726/CppMath/), it's structured as a `manu343726/cppmath` biicode block. *manu343726 is the biicode developer who wrote the example, hence that user instead of `developer`.*
 
-Supposing your biicode account is `developer`, create a `.travis.yml` file to automatize deploy and publish like this:
+Supposing your biicode account is `developer`, create a `.travis.yml` file to automate deploy and publish like this:
 
 {% highlight yaml %}
 install:
@@ -140,7 +140,7 @@ deploy:
     repo: developer/cppmath #GitHub repo
 {% endhighlight %}
 
-Script part creates, builds and runs the project and if it's a success Travis CI executes deploy publishing the `developer/cppmath` block.
+`install:` installs biicode cand configures C++ tools. `script:` creates, builds and runs the project. If it's a success Travis CI executes deploy publishing the `developer/cppmath` block.
 
 >**Tip**  
 >biicode generates an executable `user_blockname_sourcefilename` for each source file with a `main()` function. In the example it would be `developer_cppmath_tests`.
