@@ -140,7 +140,7 @@ deploy:
     repo: developer/cppmath #GitHub repo
 {% endhighlight %}
 
-`install:` installs biicode cand configures C++ tools. `script:` creates, builds and runs the project. If it's a success Travis CI executes deploy publishing the `developer/cppmath` block.
+`install:` installs biicode and configures C++ tools. `script:` creates, builds and runs the project. If it's a success Travis CI executes deploy publishing the `developer/cppmath` block.
 
 >**Tip**  
 >biicode generates an executable `user_blockname_sourcefilename` for each source file with a `main()` function. In the example it would be `developer_cppmath_tests`.
